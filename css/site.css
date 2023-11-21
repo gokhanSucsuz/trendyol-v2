@@ -1,8 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
 }
 
 a {
@@ -10,32 +7,40 @@ a {
     color: #333333;
 }
 
+
 .container {
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 20px;
+display: flex;
+flex-wrap: wrap;
+column-gap: 20px;
+row-gap:20px;
+max-width: 1200px;
+margin: 0 auto;
+justify-content: center;
+}
+
+.card{
+border: 1px solid rgb(221, 220, 220);
+border-radius: 10px;
+display: flex;
+width: 250px;
 }
 
 .image-container {
-    width: 220px;
     position: relative;
 }
 
-.image-container>img {
-    background-image: url("/img/1_org_zoom.webp");
+.wimg{
     border-radius: 10px;
+    width: 250px;
 }
 
-.w-100 {
-    width: 100%;
-}
-
-.image-overlay-header>.delivery {
+.image-overlay-header>.delivery,
+.image-overlay-header>.cargo  {
     position: absolute;
     top: 10px;
     left: 10px;
     display: flex;
-    width: 57px;
+    width: 60px;
     align-items: center;
     font-size: 12px;
     line-height: 8px;
@@ -44,23 +49,13 @@ a {
     background-color: #0bc15c;
     border-radius: 2px;
     padding: 3px;
+    height: 16px;
+}
+.image-overlay-header>.cargo {
+    top: 36px;
+    background-color: #535353;
 }
 
-.image-overlay-header>.cargo {
-    position: absolute;
-    top: 36px;
-    left: 10px;
-    display: flex;
-    width: 57px;
-    align-items: center;
-    font-size: 12px;
-    line-height: 8px;
-    column-gap: 5px;
-    color: aliceblue;
-    background-color: #535353;
-    border-radius: 2px;
-    padding: 3px;
-}
 
 .image-overlay-body>img {
     width: 50px;
@@ -71,6 +66,7 @@ a {
 
 .product-down {
     padding: 8px;
+    font-size: 14px;
 }
 
 .product-down>.title>span {
@@ -100,9 +96,54 @@ a {
     display: flex;
     color: #bb0039;
     column-gap: 5px;
+    margin-top: 10px;
 }
 
 .price-promotion-container>.low-price-in-last-month>div {
     font-size: 12px;
     font-weight: 500;
+}
+
+.price-promotion-container>.lowest-price{
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+.price-promotion-container>.lowest-price>:nth-child(1){
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #535353;
+}
+
+.price-promotion-container>.lowest-price>:nth-child(2){
+    font-size: 16px;
+    color: #bb0039;
+    font-weight: 600;
+}
+
+.badges-wrapper{
+    display: flex;
+    column-gap: 5px;
+    padding: 5px;
+}
+
+.badges-wrapper>.coupon{
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    padding-right: 5px;
+    background-color: #fff0f5;
+    border-radius: 5px;
+}
+
+.badges-wrapper>.video{
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    padding-right: 5px;
+    background-color: #ebf5ff;
+    border-radius: 5px;
 }
