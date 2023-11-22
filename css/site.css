@@ -35,7 +35,8 @@ width: 250px;
 }
 
 .image-overlay-header>.delivery,
-.image-overlay-header>.cargo  {
+.image-overlay-header>.cargo,
+.image-overlay-header>.like  {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -56,6 +57,18 @@ width: 250px;
     background-color: #535353;
 }
 
+.image-overlay-header>.like{
+    top: 10px;
+    left: 210px;
+    width: 100px;
+    background-color: transparent;
+ 
+}
+
+.image-overlay-header>.like>i{
+       font-size: 30px;
+       
+}
 
 .image-overlay-body>img {
     width: 50px;
